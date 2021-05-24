@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum PlayerState   //usatalm sobie 
-    //STATEMACHINE i dzięki temu mogę korzystać z takiego jakby booleana, który oznaczA STAN MOJEJ POSTACI...\
+public enum PlayerState     
 {
     walk,
     interact,
@@ -29,10 +28,6 @@ public class PlayerMovement : MonoBehaviour
     public VectorValue changeVector;
     public Inventory playersInventory;
     public SpriteRenderer currentItem;
-
-    
-    
-
    
     private void Start()
     {
@@ -45,7 +40,6 @@ public class PlayerMovement : MonoBehaviour
         _myRigid.transform.position = changeVector.initialVector;
     }
 
-    // Update is called once per frame
     private void Update()
     {
        
