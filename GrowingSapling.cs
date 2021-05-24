@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GrowingSapling : Sign
+public class GrowingSapling : InteractableObject
 {
     private bool _thereIsASaplingInIt = false;
     private bool _deleteSaplingFromInventory = false;
