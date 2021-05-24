@@ -13,10 +13,7 @@ public class Log : Enemy
     public float attackRadius;
     public Transform homePosition;
     
-    
-
-
-    // Start is called before the first frame update
+   
     private void Start()
     {
         currentState = EnemyState.idle; 
@@ -26,7 +23,6 @@ public class Log : Enemy
         logAnim.SetBool("Woke", false);
     }
 
-    // Update is called once per frame
     private void FixedUpdate()
     {
         CheckDistance();
@@ -46,10 +42,10 @@ public class Log : Enemy
                 
                 ChangeAnim(tempTarget - transform.position);
                 
-                rb.MovePosition(tempTarget); //ruszam go nei transform.position, bo to jest ingerencja w fizykę ! 
+                rb.MovePosition(tempTarget);  
                 ChangeState(EnemyState.walk);
                 
-            }                                   // używam Rigidbody do poruszenia LOga 
+            }                                   
         }
         else if (Vector3.Distance(targetTransform.position, transform.position) >= chaseRadius)
         {
@@ -79,7 +75,7 @@ public class Log : Enemy
 
 
 
-    private void SetAnim(Vector2 setVector)  //muszę sobie coś takie ustawić, bo tutaj chodzi o VECTOR !!! 
+    private void SetAnim(Vector2 setVector)  
     {
         logAnim.SetFloat("MoveX",setVector.x);
         logAnim.SetFloat("MoveY", setVector.y);
