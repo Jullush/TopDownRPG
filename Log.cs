@@ -19,7 +19,7 @@ public class Log : Enemy
     // Start is called before the first frame update
     private void Start()
     {
-        currentState = EnemyState.idle; //bo dziedziczę, po ENEMY !, więc nie msuzę szukać componentu, tak jak w knockbacku !
+        currentState = EnemyState.idle; 
         logAnim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         targetTransform = GameObject.FindGameObjectWithTag("Player").transform;
